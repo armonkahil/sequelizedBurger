@@ -1,0 +1,35 @@
+body {
+  background: orange;
+  color: darkblue;
+  /* text-align: center; */
+  font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+  display: border-box;
+
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+p {
+  color: darkblue;
+}
+
+#burgerName {
+  width: 200px;
+  height: 40px;
+}
+#add {
+  margin: 10px;
+}
+h1 {
+  color: red;
+}
+
+li {
+  background: white;
+  padding: 5px;
+  margin: 5px;
+}
+

@@ -1,7 +1,7 @@
-# [Burger Logger](https://obscure-meadow-09470.herokuapp.com/)
+# [Burger Sequelize Logger](https://polar-lake-43271.herokuapp.com/)
 Node, Handlebars, and Myqyl Full-stack assignment
 ### Technologies used:
-- Orm
+- Sequelize
 - Node.js
 - Mysql
 - Express

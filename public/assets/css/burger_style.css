@@ -1,30 +1,25 @@
+
 body {
   background: orange;
-  color: darkblue;
-  /* text-align: center; */
-  font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: 'Domine', serif;
   display: border-box;
 
 }
-
+/* Burger image */
 .logo {
   width: 200px;
   height: auto;
+  margin: 50px;
 }
 
-p {
-  color: darkblue;
-}
-
+/* textarea */
 #burgerName {
   width: 200px;
   height: 40px;
 }
+/* add button */
 #add {
   margin: 10px;
-}
-h1 {
-  color: red;
 }
 
 li {
@@ -32,4 +27,3 @@ li {
   padding: 5px;
   margin: 5px;
 }
-

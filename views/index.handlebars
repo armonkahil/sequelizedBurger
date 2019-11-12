@@ -1,11 +1,11 @@
 {{! Header and title}}
 <div class="container-fluid">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-8 justify-content-center">
+    <div class="row justify-content-center align-items-end">
+      <div class="col-12 justify-content-center align-items-end mx-auto no-gutters">
         <div class="text-center">
-          <img src='/assets/images/burger.png' alt='burger' type='img/png' class='logo'>
-          <h1>Eat-Da-Burger!</h1>
+          <img src='/assets/images/burger.png' alt='burger' type='img/png' class='logo img-fluid mx-auto'>
+          <h1 class = "font-effect-3d">Eat-Da-Burger!</h1>
         </div>
       </div>
     </div>
@@ -14,13 +14,13 @@
   <div class="container-fluid">
     <div class="row justify-content-between">
       <div class="col-4">
-        <h2 class="text-center">Burgers Saved</h2>
-        <ol class="list-group">
+        <h2 class="text-center font-effect-fire">Burgers Saved</h2>
+        <ol class="list-group font-effect-shadow-multiple">
           {{#each burgers}}
           {{#unless devoured}}
           <li class="justify-content-end">
             {{burger_name}}
-            <button class="devour btn btn-primary btn-sm float-right" id="{{burger_name}}">Devour!!!
+            <button class="devour btn btn-primary btn-sm float-right font-effect-fire-animation" id="{{burger_name}}">Devour!!!
             </button>
           </li>
           {{/unless}}
@@ -28,8 +28,8 @@
         </ol>
       </div>
       <div class="col-4">
-        <h2 class="text-center">Burgers Devoured</h2>
-        <ol type="1" class="list-group">
+        <h2 class="text-center font-effect-fire-animation">Burgers Devoured</h2>
+        <ol type="1" class="list-group font-effect-shadow-multiple">
           {{#each burgers}}
           {{#if devoured}}
           <li class="justify-content-end">
@@ -47,9 +47,9 @@
       <div class="col-8 justify-content-center">
         <div class="text-center">
           <form>
-            <input type="text" name="name" id='burgerName'><br>
+            <input type="text" name="name" id='burgerName' class="font-effect-shadow-multiple"><br>
             <input class="btn btn-primary btn-small" type="button" value="Submit" id="add">
-            <p>Enter a burger you want to eat Click the "Submit" button.</p>
+            <p class="font-effect-3d">Enter a burger you want to eat Click the "Submit" button.</p>
           </form>
         </div>
       </div>

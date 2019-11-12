@@ -21,11 +21,9 @@ $(document).ready(function () {
   $('.devour').on('click', function () {
     var eaten = this.id
     munch.play()
-    console.log(eaten)
     $.ajax('/api/burgers/' + eaten, {
       type: 'PUT'
     }).then(function () {
-      console.log('devouring burger')
       location.reload()
     })
   })

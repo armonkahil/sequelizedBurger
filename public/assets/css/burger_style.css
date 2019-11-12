@@ -1,6 +1,9 @@
 
 body {
-  background: orange;
+  background-image: url(../images/Burgers_Lead.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background: yellow; */
   font-family: 'Domine', serif;
   display: border-box;
 
@@ -26,4 +29,8 @@ li {
   background: white;
   padding: 5px;
   margin: 5px;
+}
+input {
+  background: none;
+
 }

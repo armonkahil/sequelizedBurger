@@ -4,7 +4,6 @@ var db = require('../models')
 module.exports = function (app) {
   app.get('/', function (req, res) {
     db.burgers.findAll({}).then(function (data) {
-      console.log('data from findAll', data)
       var handlebarsOBj = {
         burgers: data
       }
@@ -14,11 +13,6 @@ module.exports = function (app) {
   })
 
   app.post('/api/burgers/:burger', function (req, res) {
-    var newBurger = {
-
-    }
-    console.log('new burger in controller', newBurger)
-
     db.burgers.create({
       burger_name: req.params.burger,
       devoured: false
@@ -30,7 +24,6 @@ module.exports = function (app) {
 
   app.put('/api/burgers/:id', function (req, res) {
     var eaten = req.params.id
-    console.log('burger devoured', eaten)
     db.burgers.update(
       { devoured: true },
       {

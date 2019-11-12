@@ -17,6 +17,6 @@ require('./routes/apiRoutes.js')(app)
 const db = require('./models')
 db.sequelize.sync().then(function () {
   app.listen(PORT, function () {
-    console.log(normal('App listening on http://localhost:' + PORT))
+    console.log(normal(`App listening on http://localhost: + ${PORT}`))
   })
 })

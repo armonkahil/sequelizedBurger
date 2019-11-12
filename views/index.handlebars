@@ -1,6 +1,6 @@
 {{! Header and title}}
 <div class="container-fluid">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row justify-content-center align-items-end">
       <div class="col-12 justify-content-center align-items-end mx-auto no-gutters">
         <div class="text-center">
@@ -19,7 +19,7 @@
         <ol class="list-group font-effect-shadow-multiple">
           {{#each burgers}}
           {{#unless devoured}}
-          <li class="justify-content-end">
+          <li class="justify-content-end animated fadeIn">
             {{burger_name}}
             <button class="devour btn btn-primary btn-sm float-right font-effect-fire-animation" id="{{burger_name}}">Devour!!!
             </button>
@@ -33,7 +33,7 @@
         <ol type="1" class="list-group font-effect-shadow-multiple">
           {{#each burgers}}
           {{#if devoured}}
-          <li class="justify-content-end">
+          <li class="justify-content-end animated fadeIn">
             {{burger_name}}
           </li>
           {{/if}}

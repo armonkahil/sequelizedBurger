@@ -6,6 +6,7 @@ body {
   /* background: yellow; */
   font-family: 'Domine', serif;
   display: border-box;
+  opacity: .8;
 
 }
 /* Burger image */

@@ -1,31 +1,22 @@
-var Sequelize = require('sequelize')
-var sequelize = require('../config/connection.js')
 
-var Burger = sequelize.define('burgers', {
-  id: {
-    type: Sequelize.INTEGER,
-    autoIncrement: true,
-    allowNull: false,
-    primaryKey: true
-  },
-
-  burger_name: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  devoured: {
-    type: Sequelize.BOOLEAN,
-    allowNull: false,
-    defaultValue: false
-  },
-  createdAt: {
-    type: Sequelize.DATE,
-    defaultValue: Sequelize.NOW
+module.exports = function (sequelize, DataTypes) {
+  var Burger = sequelize.define('burgers', {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      allowNull: false,
+      primaryKey: true
+    },
+    burger_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    devoured: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false
+    }
   }
-},
-{
-  freezeTableName: true
+  )
+  return Burger
 }
-)
-Burger.sync()
-module.exports = Burger

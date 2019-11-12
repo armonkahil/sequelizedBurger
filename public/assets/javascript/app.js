@@ -2,7 +2,7 @@
 $(document).ready(function () {
   var munch = new Audio('./assets/audio/munch-sound-effect.mp3')
   munch.autoplay=true;
-  $('#add').on('click', function () {
+  $('#add').on('click', () => {
     event.preventDefault()
     const burger = $('#burgerName').val().trim()
     if (burger === '' || burger === undefined) {
@@ -11,7 +11,7 @@ $(document).ready(function () {
       munch.play()
       $.ajax('/api/burgers/' + burger, {
         type: 'POST'
-      }).then(function () {
+      }).then(() => {
       // Reload the page to get the updated list
         location.reload()
       })
@@ -20,10 +20,11 @@ $(document).ready(function () {
 
   $('.devour').on('click', function () {
     var eaten = this.id
+    console.log(eaten)
     munch.play()
     $.ajax('/api/burgers/' + eaten, {
       type: 'PUT'
-    }).then(function () {
+    }).then(() => {
       location.reload()
     })
   })

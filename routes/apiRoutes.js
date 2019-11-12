@@ -1,14 +1,14 @@
 
-var db = require('../models')
+const db = require('../models')
 
-module.exports = function (app) {
-  app.get('/', function (req, res) {
+module.exports = (app) => {
+  app.get('/', (req, res) => {
     db.burgers.findAll({
       order: [
         ['burger_name', 'ASC']
       ]
-    }).then(function (data) {
-      var handlebarsOBj = {
+    }).then((data) => {
+      const handlebarsOBj = {
         burgers: data
       }
       res.render('index', handlebarsOBj)
@@ -16,18 +16,18 @@ module.exports = function (app) {
     )
   })
 
-  app.post('/api/burgers/:burger', function (req, res) {
+  app.post('/api/burgers/:burger', (req, res) => {
     db.burgers.create({
       burger_name: req.params.burger,
       devoured: false
-    }).then(function (result) {
+    }).then((result) => {
     // Send back the ID of the new quote
       res.redirect('/')
     })
   })
 
-  app.put('/api/burgers/:id', function (req, res) {
-    var eaten = req.params.id
+  app.put('/api/burgers/:id', (req, res) => {
+    const eaten = req.params.id
     db.burgers.update(
       { devoured: true },
       {
@@ -35,7 +35,7 @@ module.exports = function (app) {
           burger_name: eaten
         }
       }
-    ).then(function (result) {
+    ).then((result) => {
       if (result.changedRows === 0) {
         return res.status(404).end()
       } else {

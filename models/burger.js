@@ -1,6 +1,6 @@
 
-module.exports = function (sequelize, DataTypes) {
-  var Burger = sequelize.define('burgers', {
+module.exports = (sequelize, DataTypes) => {
+  const Burger = sequelize.define('burgers', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,

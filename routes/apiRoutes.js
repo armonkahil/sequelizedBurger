@@ -8,11 +8,15 @@ module.exports = (app) => {
         ['burger_name', 'ASC']
       ]
     }).then((data) => {
-      console.log(data.burgers)
+      let dataArray  = []
+      for (let i = 0; i < data.length; i++) {
+        console.log('data', data[i].dataValues)
+        dataArray.push(data[i].dataValues)
+      }
       const { burger_name } = data
-      console.log(burger_name)
+      console.log('burger name', burger_name)
       const handlebarsOBj = {
-        burgers: data
+        burgers: dataArray
       }
       res.render('index', handlebarsOBj)
     }
@@ -39,14 +43,14 @@ module.exports = (app) => {
         }
       }
     ).then((result) => {
-      console.table(result)
+      console.table('api routes', result)
       res.render('partials/burgers/burger-unblocked')
     })
   })
 
   app.delete('/api/burgers/:name', function (req, res) {
     const name = req.params.name
-    console.log(name)
+    console.log('destroy call', name)
     db.burgers.destroy({
       where: {
         burger_name: name

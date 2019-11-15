@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   var munch = new Audio('./assets/audio/munch-sound-effect.mp3')
   var wrong = new Audio('./assets/audio/ball-origin-beep.mp3')
@@ -6,7 +5,9 @@ $(document).ready(function () {
 
   $('#add').on('click', function () {
     event.preventDefault()
-    const burger = $('#burgerName').val().trim()
+    const burger = $('#burgerName')
+      .val()
+      .trim()
     console.log('burger added', burger)
     if (burger === '' || burger === undefined) {
       wrong.autoplay = true
@@ -17,7 +18,7 @@ $(document).ready(function () {
       $.ajax('/api/burgers/' + burger, {
         type: 'POST'
       }).then(function () {
-      // Reload the page to get the updated list
+        // Reload the page to get the updated list
         location.reload()
       })
     }
@@ -29,7 +30,9 @@ $(document).ready(function () {
     console.log(eaten)
     const target = `${eaten}AA`
     console.log(`target ${target}`)
-    var who = $('#' + target).val().trim()
+    var who = $('#' + target)
+      .val()
+      .trim()
     console.log('who is this', who)
     console.log('eat what', eaten)
     if (who === '' || who === undefined) {
@@ -56,22 +59,20 @@ $(document).ready(function () {
     munch.play()
     $.ajax('/api/burgers/' + burgerDelete, {
       type: 'DELETE'
-    }
-    ).then(() => {
+    }).then(() => {
       location.reload()
     })
   })
 
   $('.devoured-delete').on('click', function () {
     event.preventDefault()
-    
+
     var burgerDelete = this.value
     console.log(burgerDelete)
     munch.play()
     $.ajax('/api/burgers/devoured/' + burgerDelete, {
       type: 'DELETE'
-    }
-    ).then(() => {
+    }).then(() => {
       location.reload()
     })
   })

@@ -21,7 +21,7 @@ module.exports = (app) => {
     )
   })
 
-  app.post('/api/burgers/', (req, res) => {
+  app.post('/api/burgers/:burger', (req, res) => {
     db.burgers.create({
       burger_name: req.params.burger,
       devoured: false

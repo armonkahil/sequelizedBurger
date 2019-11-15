@@ -12,8 +12,8 @@
   </div>
 {{! Burger list sections}}
   <div class="container-fluid">
-    <div class="row justify-content-around">
-      <div class="col-4">
+    <div class="row justify-content-between">
+      <div class="col-5">
         <h2 class="text-center font-effect-fire">Burgers Saved</h2>
         <ol class="list-group font-effect-shadow-multiple">
           {{#each burgers}}
@@ -23,7 +23,7 @@
           {{/each}}
         </ol>
       </div>
-      <div class="col-4">
+      <div class="col-5">
         <h2 class="text-center font-effect-fire-animation">Burgers Devoured</h2>
         <ol type="1" class="list-group font-effect-shadow-multiple">
           {{#each burgers}}
@@ -41,11 +41,11 @@
       <div class="col-8 justify-content-center">
         <div class="text-center">
           <form>
-            <input type="text" name="name" id='burgerName' class="font-effect-shadow-multiple"><br>
+            <input type="text" name="name" id='burgerName' class="font-effect-shadow-multiple form-con"><br>
             <input class="btn btn-primary btn-small" type="button" value="Submit" id="add">
             <p class="font-effect-3d">Enter a burger you want to eat Click the "Submit" button.</p>
           </form>
-        </div>
+        </br>
       </div>
     </div>
   </div>

@@ -1,13 +1,11 @@
-
-<div class="row animated align-items-center fadeIn justify-content-center">
-  <diV class="col">
-    <li>
+<li>
+  <div class="row animated fadeIn">
+    <diV class="col align-self-center align-items-center text-center">
       {{burger_name}}
       <small>(eaten by {{customer_name}})</small>
-    </li>
+      <button class="devoured-delete btn btn-primary my-2 btn-sm font-effect-fire-animation"
+        id="?{{burger_name}}">Delete!!!
+      </button>
+    </div>
   </div>
-  <div class="col-1 justify-content-around">
-    <button class="devoured-delete btn btn-primary my-2 btn-sm font-effect-fire-animation" id="?{{burger_name}}">Delete!!!
-    </button>
-  </div>
-</div>
+</li>

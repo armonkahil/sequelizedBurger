@@ -25,14 +25,11 @@ body {
 #add {
   margin: 10px;
 }
-
-.whoDid {
+.whoDIDit {
   width: 100px;
 }
-
 li {
   background: white;
-  padding: 5px;
-  margin: 10px;
+
   display: inline;
 }

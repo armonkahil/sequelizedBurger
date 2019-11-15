@@ -1,20 +1,23 @@
-<div class="row animated fadeIn align-items-center">
-  <div class="col">
-    <li>
-      {{burger_name}}
-    </li>
-  </div>
-  <div class="col justify-content-around">
-    <div class="form-inline">
-      <div class="form-group">
-        <input type="text" class="whoDid form-control my-2 mr-1" id="{{burger_name}}AA" placeholder="Name">
-        <button class="devour btn btn-primary my-2 mr-1 btn-sm font-effect-fire-animation"
-          id="{{burger_name}}">Devour!!!
-        </button>
-        <button class="delete btn btn-primary my-2 btn-sm font-effect-fire-animation" id="{{id}}"><i
-            class="far fa-trash-alt"></i>
-        </button>
+<li>
+  <form>
+    <div class="form-row align-items-center">
+      <div class="col-auto">
+        <label for="staticEmail2" class="sr-only text-center">{{burger_name}}</label>
+        <input type="text" readonly class="form-control-plaintext text-center" id="staticEmail2"
+          value="{{burger_name}}">
+      </div>
+      <div class="col-auto">
+        <label class="sr-only" for="inlineFormInputGroup">Name</label>
+        <input type="text" class="form-control whoDIDit my-1" id="{{burger_name}}AA" placeholder="Name">
+      </div>
+      <div class="col-auto">
+        <div class="btn-group btn-group-sm" role="group" aria-label="button group">
+          <button type="button" class="devour btn btn-primary font-effect-fire-animation"
+            id="{{burger_name}}">Devour</button>
+          <button type="button" class="delete btn btn-primary font-effect-fire-animation" id="{{id}}"><i
+              class="far fa-trash-alt"></i></button>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </form>
+</li>

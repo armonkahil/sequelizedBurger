@@ -24,7 +24,6 @@ $(document).ready(function () {
   })
 
   $('.devour').on('click', function () {
-   
     var eaten = this.id
     console.log(typeof eaten)
     console.log(eaten)

@@ -64,8 +64,8 @@ $(document).ready(function () {
 
   $('.devoured-delete').on('click', function () {
     event.preventDefault()
-    console.log(this.id)
-    var burgerDelete = this.id
+    
+    var burgerDelete = this.value
     console.log(burgerDelete)
     munch.play()
     $.ajax('/api/burgers/devoured/' + burgerDelete, {

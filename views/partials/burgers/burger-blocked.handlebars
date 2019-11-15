@@ -1,10 +1,11 @@
-<li>
-  <div class="row animated fadeIn">
+<li class = "animated fadeIn my-2">
+  <div class="row">
     <diV class="col align-self-center align-items-center text-center">
       {{burger_name}}
-      <small>(eaten by {{customer_name}})</small>
+      <small class = "text-muted">(eaten by {{customer_name}})</small>
       <button class="devoured-delete btn btn-primary my-2 btn-sm font-effect-fire-animation"
-        id="?{{burger_name}}">Delete!!!
+        value="{{id}}"><i
+              class="far fa-trash-alt"></i>
       </button>
     </div>
   </div>

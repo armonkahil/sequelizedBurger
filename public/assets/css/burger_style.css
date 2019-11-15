@@ -26,9 +26,13 @@ body {
   margin: 10px;
 }
 
+.whoDid {
+  width: 100px;
+}
+
 li {
   background: white;
   padding: 5px;
-  margin: 5px;
+  margin: 10px;
   display: inline;
 }

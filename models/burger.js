@@ -20,15 +20,14 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: false
+    },
+    customer_name: {
+      type: DataTypes.STRING,
+      defaultValue: 'anonymous',
+      validate: {
+        len: [1]
+      }
     }
   })
-
-  // Burger.associate = (models) => {
-  //   Burger.belongsTo(models.Customer, {
-  //     foreignKey: {
-  //       allowNull: true
-  //     }
-  //   })
-  // }
   return Burger
 }

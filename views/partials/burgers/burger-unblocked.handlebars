@@ -1,13 +1,20 @@
-<div class="row animated fadeIn">
-  <diV class="col">
-    <li class="justify-content-end">
+<div class="row animated fadeIn align-items-center">
+  <div class="col">
+    <li>
       {{burger_name}}
     </li>
   </div>
-  <div class="col">
-    <button class="devour btn btn-primary my-2 mr-1 btn-sm font-effect-fire-animation" id="{{burger_name}}">Devour!!!
-    </button>
-    <button class="delete btn btn-primary my-2 btn-sm font-effect-fire-animation" id="?{{burger_name}}"><i class="far fa-trash-alt"> Delete</i>
-    </button>
+  <div class="col justify-content-around">
+    <div class="form-inline">
+      <div class="form-group">
+        <input type="text" class="whoDid form-control my-2 mr-1" id="{{burger_name}}AA" placeholder="Name">
+        <button class="devour btn btn-primary my-2 mr-1 btn-sm font-effect-fire-animation"
+          id="{{burger_name}}">Devour!!!
+        </button>
+        <button class="delete btn btn-primary my-2 btn-sm font-effect-fire-animation" id="{{id}}"><i
+            class="far fa-trash-alt"></i>
+        </button>
+      </div>
+    </div>
   </div>
 </div>

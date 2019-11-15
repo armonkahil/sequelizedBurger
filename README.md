@@ -4,6 +4,7 @@ Sequelize Full-stack assignment
 
 ### Technologies used:
 - Sequelize
+- Sequelize-CLI
 - Node.js
 - Mysql
 - Express

@@ -30,9 +30,5 @@ li {
   background: white;
   padding: 5px;
   margin: 5px;
-}
-
-input {
-  background: none;
-
+  display: inline;
 }

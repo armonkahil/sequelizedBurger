@@ -8,6 +8,9 @@ module.exports = (app) => {
         ['burger_name', 'ASC']
       ]
     }).then((data) => {
+      console.log(data.burgers)
+      const { burger_name } = data
+      console.log(burger_name)
       const handlebarsOBj = {
         burgers: data
       }
@@ -21,8 +24,8 @@ module.exports = (app) => {
       burger_name: req.params.burger,
       devoured: false
     }).then((result) => {
-    // Send back the ID of the new quote
-      res.redirect('/')
+      console.table(result)
+      res.render('partials/burgers/burger-unblocked')
     })
   })
 
@@ -36,11 +39,32 @@ module.exports = (app) => {
         }
       }
     ).then((result) => {
-      if (result.changedRows === 0) {
-        return res.status(404).end()
-      } else {
-        res.status(200).end()
+      console.table(result)
+      res.render('partials/burgers/burger-unblocked')
+    })
+  })
+
+  app.delete('/api/burgers/:name', function (req, res) {
+    const name = req.params.name
+    console.log(name)
+    db.burgers.destroy({
+      where: {
+        burger_name: name
       }
+    }).then(function (result) {
+      res.render('partials/burgers/burger-unblocked')
+    })
+  })
+
+  app.delete('/api/burgers/devoured/:name', function (req, res) {
+    const name = req.params.name
+    console.log(name)
+    db.burgers.destroy({
+      where: {
+        burger_name: name
+      }
+    }).then(function (result) {
+      res.render('partials/burgers/burger-blocked')
     })
   })
 }

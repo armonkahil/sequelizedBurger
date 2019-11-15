@@ -1,29 +1,24 @@
 {{! Header and title}}
 <div class="container-fluid">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row justify-content-center align-items-end">
       <div class="col-12 justify-content-center align-items-end mx-auto no-gutters">
         <div class="text-center">
-          {{!-- <img src='/assets/images/burger.png' alt='burger' type='img/png' class='logo img-fluid mx-auto'> --}}
-          <h1 class = "font-effect-3d my-5">Eat-Da-Burger 2!</h1>
-          <h2 class = "font-effect-3d">The Sequel</h2>
+          <img src='/assets/images/burger.png' alt='burger' type='img/png' class='logo img-fluid mx-auto'>
+          <h1 class = "font-effect-3d">Eat-Da-Burger!</h1>
         </div>
       </div>
     </div>
   </div>
 {{! Burger list sections}}
   <div class="container-fluid">
-    <div class="row justify-content-between">
+    <div class="row justify-content-around">
       <div class="col-4">
         <h2 class="text-center font-effect-fire">Burgers Saved</h2>
         <ol class="list-group font-effect-shadow-multiple">
           {{#each burgers}}
           {{#unless devoured}}
-          <li class="justify-content-end animated fadeIn">
-            {{burger_name}}
-            <button class="devour btn btn-primary btn-sm float-right font-effect-fire-animation" id="{{burger_name}}">Devour!!!
-            </button>
-          </li>
+            {{> burgers/burger-unblocked devoured=false}}
           {{/unless}}
           {{/each}}
         </ol>
@@ -33,9 +28,7 @@
         <ol type="1" class="list-group font-effect-shadow-multiple">
           {{#each burgers}}
           {{#if devoured}}
-          <li class="justify-content-end animated fadeIn">
-            {{burger_name}}
-          </li>
+            {{> burgers/burger-blocked devoured=true}}
           {{/if}}
           {{/each}}
         </ol>

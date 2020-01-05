@@ -5,12 +5,12 @@
       <div class="col-12 justify-content-center align-items-end mx-auto no-gutters">
         <div class="text-center">
           <img src='/assets/images/burger.png' alt='burger' type='img/png' class='logo img-fluid mx-auto'>
-          <h1 class = "font-effect-3d">Eat-Da-Burger!</h1>
+          <h1 class="font-effect-3d">Eat-Da-Burger!</h1>
         </div>
       </div>
     </div>
   </div>
-{{! Burger list sections}}
+  {{! Burger list sections}}
   <div class="container-fluid">
     <div class="row justify-content-between">
       <div class="col-5">
@@ -18,7 +18,7 @@
         <ol class="list-group font-effect-shadow-multiple">
           {{#each burgers}}
           {{#unless devoured}}
-            {{> burgers/burger-unblocked devoured=false}}
+          {{> burgers/burger-unblocked devoured=false}}
           {{/unless}}
           {{/each}}
         </ol>
@@ -28,7 +28,7 @@
         <ol type="1" class="list-group font-effect-shadow-multiple">
           {{#each burgers}}
           {{#if devoured}}
-            {{> burgers/burger-blocked devoured=true}}
+          {{> burgers/burger-blocked devoured=true}}
           {{/if}}
           {{/each}}
         </ol>
@@ -41,13 +41,14 @@
       <div class="col-8 justify-content-center">
         <div class="text-center">
           <form>
-            <div class = "form-group">
-            <input type="text" name="name" id='burgerName' class="font-effect-shadow-multiple"><br>
-            <input class="btn btn-primary btn-small" type="button" value="Submit" id="add">
-            <p class="font-effect-3d">Enter a burger you want to eat Click the "Submit" button.</p>
-        </div>  </form>
-        </br>
+            <div class="form-group">
+              <input type="text" name="name" id='burgerName' class="font-effect-shadow-multiple"><br>
+              <input class="btn btn-primary btn-small" type="button" value="Submit" id="add">
+              <p class="font-effect-3d">Enter a burger you want to eat Click the "Submit" button.</p>
+            </div>
+          </form>
+          </br>
+        </div>
       </div>
     </div>
   </div>
-</div>

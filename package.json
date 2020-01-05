@@ -4,12 +4,12 @@
   "description": "Node, Handlebars, and Myqyl Full-stack assignment\r ### Technologies used:\r - Orm\r - Node.js\r - Mysql\r - Express\r - Express-handlebars\r - Chalk\r - Heroku\r - JawsDB\r - Jquery",
   "main": "server.js",
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^3.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "mysql": "^2.17.1",
-    "mysql2": "^2.0.0",
-    "sequelize": "^5.21.2",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.3",
     "sequelize-cli": "^5.5.1"
   },
   "devDependencies": {},

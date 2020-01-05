@@ -1,6 +1,10 @@
-# [Burger Sequelize Logger](https://polar-lake-43271.herokuapp.com/)
+# Eat-Da-Burger 2: The Sequel
+![Landing page](public/assets/images/landing.png)
+An **Optional** Sequelize Full-stack assignment.
+___
+In this assignment, I was tasked with creating a sequelized version of the very awesome [Eat-Da-Burger](https://github.com/armonkahil/burger) burger logging app.
 
-Sequelize Full-stack assignment
+Deployed on [Heroku](https://polar-lake-43271.herokuapp.com/)
 
 ### Technologies used:
 - Sequelize

@@ -19,4 +19,5 @@ Deployed on [Heroku](https://polar-lake-43271.herokuapp.com/)
 - Jquery
 - AnimateCSS
 - Google Fonts
+- Bootstrap 4
 
